@@ -4,6 +4,7 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { TabsModule } from 'ngx-bootstrap/tabs';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 
 @NgModule({
@@ -14,12 +15,16 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
     TabsModule.forRoot(),
     BrowserAnimationsModule,
     ToastrModule.forRoot({
-      positionClass:  'toast-bottom-right'})
+      positionClass:  'toast-bottom-right'}),
+    NgxSpinnerModule.forRoot({
+      type: 'line-scale-party'
+    })
   ],
   exports: [
     BsDropdownModule,
     ToastrModule,
-    TabsModule
+    TabsModule,
+    NgxSpinnerModule
   ]
 })
 export class SharedModule { }
